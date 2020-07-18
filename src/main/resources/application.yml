@@ -1,0 +1,18 @@
+spring:
+  application.name: ZCache-Example
+  datasource:
+    driver-class-name: org.apache.derby.jdbc.EmbeddedDriver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:derby:./data/db;create=true
+  redis:
+    host: 127.0.0.1
+    port: 16379
+zcache: # 开启缓存
+  enabled: true
+
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    default-fetch-size: 100
+    default-statement-timeout: 30
